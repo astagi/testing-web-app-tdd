@@ -5,3 +5,6 @@ def test_uniformat():
 
 def test_uniformat_error():
     assert uniformat('Something went wrong!', 'E') == '🚨 Something went wrong!'
+
+def test_uniformat_warning():
+    assert uniformat('Pay attention!', 'W') == '⚠️ Pay attention!'
