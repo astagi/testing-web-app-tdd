@@ -1,4 +1,6 @@
-from mylib.weather import get_temperature_by_city
+import pytest
+import requests
+from mylib.weather import get_temperature_by_city, WeatherAPIError, WeatherConnectionError
 
 
 def test_get_temperature_by_city(mocker):
@@ -67,3 +69,17 @@ def test_get_temperature_by_city(mocker):
     assert temperature['humidity'] == 100
     assert temperature['temp_min'] == 272.31
     assert temperature['temp_max'] == 282.31
+
+
+def test_get_temperature_by_city_connection_error(mocker):
+    mocked_requests_get = mocker.patch('mylib.weather.requests.get')
+    mocked_requests_get.side_effect = requests.exceptions.ConnectionError
+    with pytest.raises(WeatherConnectionError):
+        temperature = get_temperature_by_city('Pistoia')
+
+
+def test_get_temperature_by_city_api_error(mocker):
+    mocked_requests_get = mocker.patch('mylib.weather.requests.get')
+    mocked_requests_get.return_value.status_code = 401
+    with pytest.raises(WeatherAPIError):
+        temperature = get_temperature_by_city('Pistoia')
