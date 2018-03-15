@@ -59,7 +59,7 @@ def test_get_temperature_by_city(mocker):
     }
 
     mocked_requests_get = mocker.patch('mylib.weather.requests.get')
-    mocked_requests_get.return_value.status_code.return_value = 200
+    mocked_requests_get.return_value.status_code = 200
     mocked_requests_get.return_value.json.return_value = mock_weather_response
     temperature = get_temperature_by_city('Pistoia')
     assert temperature['temp'] == 279.61
