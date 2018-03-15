@@ -8,3 +8,6 @@ def test_uniformat_error():
 
 def test_uniformat_warning():
     assert uniformat('Pay attention!', 'W') == '⚠️ Pay attention!'
+
+def test_uniformat_nonsense():
+    assert uniformat('Nonsense type!', 'NNS') == '🦄 Nonsense type!'
