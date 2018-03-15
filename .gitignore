@@ -25,3 +25,6 @@ media/
 deploy_settings_local.sh
 *.log
 yarn.lock
+
+.pytest_cache
+.vscode
