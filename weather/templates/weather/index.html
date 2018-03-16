@@ -1,0 +1,46 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Weather Report</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="apple-touch-icon" href="icon.png">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link href="{% static 'weather/css/weather.css' %}" rel="stylesheet">
+    </head>
+    <body class="text-center">
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+                <div class="inner">
+                    <h3 class="masthead-brand">WЯ.</h3>
+                    <nav class="nav nav-masthead justify-content-center">
+                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">Contact us</a>
+                    </nav>
+                </div>
+            </header>
+
+            <main role="main" class="inner cover">
+                <h1 class="cover-heading">Weather Яeport .</h1>
+                <input type="text" id="inputCity" class="form-control mt-3 mb-3" placeholder="Insert the city" required>
+                <p class="lead">
+                    <a href="#" class="btn btn-lg btn-secondary">Find the current temperature</a>
+                </p>
+            </main>
+
+            <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>This is a simple project by <a href="https://twitter.com/4stagi">@4stagi</a>.</p>
+            </div>
+            </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    </body>
+</html>

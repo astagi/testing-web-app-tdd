@@ -11,7 +11,7 @@ venv
 .coverage
 deploy_settings.py
 local_settings.py
-static/
+/static/
 libs/
 node_modules
 .cache
