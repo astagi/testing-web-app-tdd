@@ -30,6 +30,10 @@ body {
   background-color: #4682B4;
 }
 
+main {
+    max-width: 365px;
+}
+
 body {
   display: -ms-flexbox;
   display: -webkit-box;
