@@ -1,0 +1,30 @@
+{
+  "name": "testing-in-python",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start",
+    "build": "gulp build"
+  },
+  "repository": "git@github.com:astagi/testing-in-python.git",
+  "author": "Andrea Stagi <stagi.andrea@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^16.2.2",
+    "browserify-istanbul": "^3.0.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-bro": "^1.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-uglify": "^3.0.0",
+    "jasmine": "^3.1.0",
+    "karma": "^2.0.2",
+    "karma-browserify": "^5.2.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.2",
+    "karma-html2js-preprocessor": "^1.1.0",
+    "karma-jasmine": "^1.1.2",
+    "watchify": "^3.11.0"
+  }
+}

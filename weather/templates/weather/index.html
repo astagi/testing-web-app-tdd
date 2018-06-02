@@ -12,7 +12,7 @@
         <link rel="apple-touch-icon" href="icon.png">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-        <link href="{% static 'weather/css/weather.css' %}" rel="stylesheet">
+        <link href="{% static 'css/styles.min.css' %}" rel="stylesheet">
     </head>
     <body class="text-center">
         <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
@@ -44,23 +44,7 @@
         </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-        <script>
-            var findTemperature = function () {
-                $('#tempResults').fadeTo(300, 0, function() {
-                    var city = $('#inputCity').val();
-                    var a= $.get( "/api/temperature?city=" + city, function() {
-                    })
-                    .done(function(data) {
-                        $('#tempResults').fadeTo(300, 1).html(
-                            'In ' + city + ' there are ' + data['temp'] + '°F'
-                        );
-                    })
-                    .fail(function(data) {
-                        $('#tempResults').fadeTo(300, 1).html(data.responseJSON['details'])
-                    })
-                })
+        <script src="{% static 'js/main.min.js' %}" crossorigin="anonymous"></script>
 
-            }
-        </script>
     </body>
 </html>

@@ -1,5 +1,5 @@
 node_modules
-build
+dist
 .DS_Store
 website/templates/website/liveReloadConf.html
 venv
@@ -9,6 +9,7 @@ venv
 *.rdb
 *.mo
 .coverage
+.fecoverage
 deploy_settings.py
 local_settings.py
 /static/
