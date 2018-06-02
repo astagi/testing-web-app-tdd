@@ -30,8 +30,16 @@ module.exports = function(config) {
         reporters: ['progress', 'coverage'],
 
         coverageReporter: {
-            type : 'html',
-            dir : '.fecoverage/'
+            reporters : [
+                {
+                    type : 'html',
+                    dir : '.fecoverage/'
+                },
+                {
+                    type: 'json',
+                    dir: '.fecoverage/'
+                }
+            ]
         },
 
         html2JsPreprocessor: {
