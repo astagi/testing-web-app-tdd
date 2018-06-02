@@ -4,6 +4,7 @@ var TemperatureService = require('./temperature_service.js');
 var findTemperature = function () {
     var service = new TemperatureService();
     $('#tempResults').fadeTo(300, 0, function() {
+        console.log($('#inputCity').val())
         var city = $('#inputCity').val();
         service.getTemperature(city)
         .done(function(data) {
