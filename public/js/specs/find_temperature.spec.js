@@ -16,11 +16,11 @@ describe("find_temperature function", function() {
             ).promise();
         });
 
-        $('#inputCity').val('Pistoia');
-        findTemperature();
+        $('#city').val('Pistoia');
+        findTemperature($('#city'), $('#results'));
 
         setTimeout(function() {
-            expect($('#tempResults').html()).toBe('In Pistoia there are 130°F');
+            expect($('#results').html()).toBe('In Pistoia there are 130°F');
             done();
         }, 1000);
     });
@@ -37,11 +37,11 @@ describe("find_temperature function", function() {
             ).promise();
         });
 
-        $('#inputCity').val('Gotham City');
-        findTemperature();
+        $('#city').val('Gotham City');
+        findTemperature($('#city'), $('#results'));
 
         setTimeout(function() {
-            expect($('#tempResults').html()).toBe('Error');
+            expect($('#results').html()).toBe('Error');
             done();
         }, 1000);
     });

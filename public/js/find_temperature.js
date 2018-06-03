@@ -1,19 +1,18 @@
 var TemperatureService = require('./temperature_service.js');
 
 
-var findTemperature = function () {
+var findTemperature = function (inputEl, outputEl) {
     var service = new TemperatureService();
-    $('#tempResults').fadeTo(300, 0, function() {
-        console.log($('#inputCity').val())
-        var city = $('#inputCity').val();
+    outputEl.fadeTo(300, 0, function() {
+        var city = inputEl.val();
         service.getTemperature(city)
         .done(function(data) {
-            $('#tempResults').fadeTo(300, 1).html(
+            outputEl.fadeTo(300, 1).html(
                 'In ' + city + ' there are ' + data['temp'] + '°F'
             );
         })
         .fail(function(data) {
-            $('#tempResults').fadeTo(300, 1).html(data.responseJSON['details'])
+            outputEl.fadeTo(300, 1).html(data.responseJSON['details'])
         })
     })
 }
