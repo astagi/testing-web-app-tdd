@@ -32,7 +32,7 @@
                 <input type="text" id="inputCity" class="form-control mt-3 mb-3" placeholder="Insert the city" required>
                 <h3 id="tempResults" class="cover-heading">-</h3>
                 <p class="lead">
-                    <button id='startSearch' class="btn btn-lg btn-secondary" onclick="findTemperature();">Find the current temperature</button>
+                    <button id='startSearch' class="btn btn-lg btn-secondary" onclick="findTemperature($('#inputCity'), $('#tempResults'));">Find the current temperature</button>
                 </p>
             </main>
 
