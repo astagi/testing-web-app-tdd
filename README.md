@@ -4,3 +4,5 @@
 
     pip install -r requirements-dev.txt
     yarn install
+
+Then [follow my presentation](https://slides.com/andreastagi/web-app-tdd#/) 👨🏻‍💻
